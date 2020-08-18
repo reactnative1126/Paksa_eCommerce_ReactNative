@@ -1,0 +1,9 @@
+{
+  "name": "Paksa",
+  "displayName": "Paksa",
+  "rnpm":{
+    "assets":[
+        "./assests/fonts/"
+    ]
+  }
+}

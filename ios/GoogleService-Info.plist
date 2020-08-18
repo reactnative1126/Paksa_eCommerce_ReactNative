@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>806846085890-9c4p5gem9bj3rcp8qci28gf22bc7k4ip.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.806846085890-9c4p5gem9bj3rcp8qci28gf22bc7k4ip</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC5rqpTllIBfBv2tPxIS7N97joA4ZMbJA8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>806846085890</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.technovier.paksa</string>
+	<key>PROJECT_ID</key>
+	<string>paksa-1126</string>
+	<key>STORAGE_BUCKET</key>
+	<string>paksa-1126.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:806846085890:ios:919a75faf5da815d41e01b</string>
+	<key>DATABASE_URL</key>
+	<string>https://paksa-1126.firebaseio.com</string>
+</dict>
+</plist>
