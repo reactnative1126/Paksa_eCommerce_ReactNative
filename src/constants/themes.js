@@ -40,7 +40,9 @@ export const colors = {
     DEFAULT: '#243235',
     PRIMARY: '#F0F0F0',
     SECONDARY: '#D5D5D5',
-    DARK: '#878998'
+    DARK: '#878998',
+    ACTIVEDOT: "#D3D3D3",
+    TEXT: '#232642'
   },
   YELLOW: {
     DEFAULT: 'yellow',

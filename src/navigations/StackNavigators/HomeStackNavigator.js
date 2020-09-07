@@ -1,7 +1,7 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 
-import { Home } from "@screens";
+import { Home, Shops, Detail } from "@screens";
 
 import { navOptionHandler } from "@utils/functions";
 
@@ -12,6 +12,16 @@ export default function HomeStack() {
       <StactHome.Screen
         name="Home"
         component={Home}
+        options={navOptionHandler}
+      />
+      <StactHome.Screen
+        name="Shops"
+        component={Shops}
+        options={navOptionHandler}
+      />
+      <StactHome.Screen
+        name="Detail"
+        component={Detail}
         options={navOptionHandler}
       />
     </StactHome.Navigator>

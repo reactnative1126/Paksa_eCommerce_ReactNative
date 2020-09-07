@@ -1,7 +1,7 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 
-import { Account } from "@screens";
+import { Account, Orders, Returns, Request, Credit } from "@screens";
 
 import { navOptionHandler } from "@utils/functions";
 
@@ -12,6 +12,26 @@ export default function AccountStack() {
       <StactAccount.Screen
         name="Account"
         component={Account}
+        options={navOptionHandler}
+      />
+      <StactAccount.Screen
+        name="Orders"
+        component={Orders}
+        options={navOptionHandler}
+      />
+      <StactAccount.Screen
+        name="Returns"
+        component={Returns}
+        options={navOptionHandler}
+      />
+      <StactAccount.Screen
+        name="Request"
+        component={Request}
+        options={navOptionHandler}
+      />
+      <StactAccount.Screen
+        name="Credit"
+        component={Credit}
         options={navOptionHandler}
       />
     </StactAccount.Navigator>

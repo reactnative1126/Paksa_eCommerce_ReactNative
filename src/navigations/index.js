@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-// import { 
-//   Splash
-// } from '@screens';
-import AuthStack from '@navigations/StackNavigators/AuthStackNavigator';
+import { 
+  SignIn, SignUp, Forgot, Search, Filters
+} from '@screens';
 import BottomTabNavigator from '@navigations/BottomTabNavigator';
 import { navOptionHandler } from '@utils/functions';
 
@@ -17,10 +16,13 @@ class AppContainer extends Component {
   render() {
     return (
       <NavigationContainer>
-        <StackApp.Navigator initialRouteName={"App"}>
-          {/* <StackApp.Screen name="Splash" component={Splash} options={navOptionHandler} /> */}
-          <StackApp.Screen name="Auth" component={AuthStack} options={navOptionHandler} />
+        <StackApp.Navigator mode="modal" initialRouteName={"App"}>
+          <StackApp.Screen name="SignIn" component={SignIn} options={navOptionHandler} />
+          <StackApp.Screen name="SignUp" component={SignUp} options={navOptionHandler} />
+          <StackApp.Screen name="Forgot" component={Forgot} options={navOptionHandler} />
           <StackApp.Screen name="App" component={BottomTabNavigator} options={navOptionHandler} />
+          <StackApp.Screen name="Search" component={Search} options={navOptionHandler} />
+          <StackApp.Screen name="Filters" component={Filters} options={navOptionHandler} />
         </StackApp.Navigator>
       </NavigationContainer>
     );

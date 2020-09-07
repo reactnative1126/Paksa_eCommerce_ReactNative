@@ -1,7 +1,7 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 
-import { Categories } from "@screens";
+import { Categories, Shops1, Detail1 } from "@screens";
 
 import { navOptionHandler } from "@utils/functions";
 
@@ -12,6 +12,16 @@ export default function CategoriesStack() {
       <StactCategories.Screen
         name="Categories"
         component={Categories}
+        options={navOptionHandler}
+      />
+      <StactCategories.Screen
+        name="Shops1"
+        component={Shops1}
+        options={navOptionHandler}
+      />
+      <StactCategories.Screen
+        name="Detail1"
+        component={Detail1}
         options={navOptionHandler}
       />
     </StactCategories.Navigator>
