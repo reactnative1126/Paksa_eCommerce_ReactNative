@@ -39,7 +39,7 @@ class Categories extends Component {
             </View>
           </View>
         </Header>
-        <View style={{ flexDirection: 'row', width: wp('100%'), height: hp('100%') }}>
+        <View style={{ flex: 1, flexDirection: 'row', width: wp('100%'), height: hp('100%') }}>
           <View style={{ width: 100, height: hp('100%'), backgroundColor: '#F6F6F6' }}>
             <FlatList
               showsVerticalScrollIndicator={false}
@@ -59,22 +59,20 @@ class Categories extends Component {
               )}
             />
           </View>
-          <ScrollView contentContainerStyle={{ width: wp('100%') - 100 }}>
-            {this.state.categoryName == 'Just for you' && <Category1 category={this.state.categoryName} style={{ padding: 5 }} onPress={() => this.props.navigation.navigate('Shops1')} />}
-            {this.state.categoryName == 'Mobiles & Accessories' && <Category2 category={this.state.categoryName} style={{ padding: 5 }} onPress={() => this.props.navigation.navigate('Shops1')} />}
-            {this.state.categoryName == 'Electronics' && <Category3 category={this.state.categoryName} style={{ padding: 5 }} onPress={() => this.props.navigation.navigate('Shops1')} />}
-            {this.state.categoryName == 'TVs & Appliances' && <Category4 category={this.state.categoryName} style={{ padding: 5 }} onPress={() => this.props.navigation.navigate('Shops1')} />}
-            {this.state.categoryName == 'Women\'s Fashion' && <Category1 category={this.state.categoryName} style={{ padding: 5 }} onPress={() => this.props.navigation.navigate('Shops1')} />}
-            {this.state.categoryName == 'Men\'s Fashion' && <Category2 category={this.state.categoryName} style={{ padding: 5 }} onPress={() => this.props.navigation.navigate('Shops1')} />}
-            {this.state.categoryName == 'Home & Kitchen' && <Category3 category={this.state.categoryName} style={{ padding: 5 }} onPress={() => this.props.navigation.navigate('Shops1')} />}
-            {this.state.categoryName == 'Watches, Bags & Accessories' && <Category4 category={this.state.categoryName} style={{ padding: 5 }} onPress={() => this.props.navigation.navigate('Shops1')} />}
-            {this.state.categoryName == 'Fragrance' && <Category1 category={this.state.categoryName} style={{ padding: 5 }} onPress={() => this.props.navigation.navigate('Shops1')} />}
-            {this.state.categoryName == 'Beauty & Personal Care' && <Category2 category={this.state.categoryName} style={{ padding: 5 }} onPress={() => this.props.navigation.navigate('Shops1')} />}
-            {this.state.categoryName == 'Kids, Baby Products & Toy' && <Category3 category={this.state.categoryName} style={{ padding: 5 }} onPress={() => this.props.navigation.navigate('Shops1')} />}
-            {this.state.categoryName == 'Sports & Fitness' && <Category4 category={this.state.categoryName} style={{ padding: 5 }} onPress={() => this.props.navigation.navigate('Shops1')} />}
-            {this.state.categoryName == 'Office Supplies, Books & Media' && <Category3 category={this.state.categoryName} style={{ padding: 5 }} onPress={() => this.props.navigation.navigate('Shops1')} />}
-            {this.state.categoryName == 'Automotive' && <Category4 category={this.state.categoryName} style={{ padding: 5 }} onPress={() => this.props.navigation.navigate('Shops1')} />}
-          </ScrollView>
+          {this.state.categoryName == 'Just for you' && <Category1 category={this.state.categoryName} style={{ padding: 5 }} onPress={() => this.props.navigation.navigate('Shops1')} />}
+          {this.state.categoryName == 'Mobiles & Accessories' && <Category2 category={this.state.categoryName} style={{ padding: 5 }} onPress={() => this.props.navigation.navigate('Shops1')} />}
+          {this.state.categoryName == 'Electronics' && <Category3 category={this.state.categoryName} style={{ padding: 5 }} onPress={() => this.props.navigation.navigate('Shops1')} />}
+          {this.state.categoryName == 'TVs & Appliances' && <Category4 category={this.state.categoryName} style={{ padding: 5 }} onPress={() => this.props.navigation.navigate('Shops1')} />}
+          {this.state.categoryName == 'Women\'s Fashion' && <Category1 category={this.state.categoryName} style={{ padding: 5 }} onPress={() => this.props.navigation.navigate('Shops1')} />}
+          {this.state.categoryName == 'Men\'s Fashion' && <Category2 category={this.state.categoryName} style={{ padding: 5 }} onPress={() => this.props.navigation.navigate('Shops1')} />}
+          {this.state.categoryName == 'Home & Kitchen' && <Category3 category={this.state.categoryName} style={{ padding: 5 }} onPress={() => this.props.navigation.navigate('Shops1')} />}
+          {this.state.categoryName == 'Watches, Bags & Accessories' && <Category4 category={this.state.categoryName} style={{ padding: 5 }} onPress={() => this.props.navigation.navigate('Shops1')} />}
+          {this.state.categoryName == 'Fragrance' && <Category1 category={this.state.categoryName} style={{ padding: 5 }} onPress={() => this.props.navigation.navigate('Shops1')} />}
+          {this.state.categoryName == 'Beauty & Personal Care' && <Category2 category={this.state.categoryName} style={{ padding: 5 }} onPress={() => this.props.navigation.navigate('Shops1')} />}
+          {this.state.categoryName == 'Kids, Baby Products & Toy' && <Category3 category={this.state.categoryName} style={{ padding: 5 }} onPress={() => this.props.navigation.navigate('Shops1')} />}
+          {this.state.categoryName == 'Sports & Fitness' && <Category4 category={this.state.categoryName} style={{ padding: 5 }} onPress={() => this.props.navigation.navigate('Shops1')} />}
+          {this.state.categoryName == 'Office Supplies, Books & Media' && <Category3 category={this.state.categoryName} style={{ padding: 5 }} onPress={() => this.props.navigation.navigate('Shops1')} />}
+          {this.state.categoryName == 'Automotive' && <Category4 category={this.state.categoryName} style={{ padding: 5 }} onPress={() => this.props.navigation.navigate('Shops1')} />}
         </View>
       </Container>
     );

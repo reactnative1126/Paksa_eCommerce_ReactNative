@@ -138,7 +138,7 @@ class Account extends Component {
               <Text style={{ marginTop: 10, fontSize: 12, fontWeight: 'bold', color: colors.BLACK }}>Paksa Credit</Text>
             </TouchableOpacity>
             <View style={{ width: 50 }} />
-            <TouchableOpacity style={{ alignItems: 'center' }} onPress={() => this.props.navigation.push('Wishlist')}>
+            <TouchableOpacity style={{ alignItems: 'center' }} onPress={() => this.props.navigation.navigate('Cart')}>
               <View style={{ justifyContent: 'center', alignItems: 'center', width: 50, height: 50, borderRadius: 25, backgroundColor: '#FeEE00' }}>
                 <Icon name="hearto" type="antdesign" size={25} />
                 <View style={{ justifyContent: 'center', alignItems: 'center', position: 'absolute', right: 10, top: 10, width: 15, height: 15, backgroundColor: '#3866DF', borderRadius: 7.5 }}>
@@ -170,7 +170,7 @@ class Account extends Component {
           {this.props.logged && <Text style={{ padding: 15, fontSize: 14, fontWeight: 'bold', color: '#7581A7' }}>MY ACCOUNT</Text>}
           {this.props.logged &&
             <View style={styles.items}>
-              <TouchableOpacity style={styles.item} onPress={() => this.refs.country_modal.open()}>
+              <TouchableOpacity style={styles.item} onPress={() => this.props.navigation.push('Address')}>
                 <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
                   <Icon name="address-card-o" type="font-awesome" size={20} />
                   <Text style={{ marginLeft: 10, marginRight: 10, fontWeight: 'bold', color: '#444' }} >Addresses</Text>
@@ -180,7 +180,7 @@ class Account extends Component {
                 </View>
               </TouchableOpacity>
               <View style={{ width: '100%', borderTopWidth: 1, borderTopColor: '#EEE' }} />
-              <TouchableOpacity style={styles.item}>
+              <TouchableOpacity style={styles.item} onPress={() => this.props.navigation.push('Payment')}>
                 <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
                   <Icon name="payment" type="material" size={20} />
                   <Text style={{ marginLeft: 10, marginRight: 10, fontWeight: 'bold', color: '#444' }} >Payment</Text>
@@ -190,7 +190,7 @@ class Account extends Component {
                 </View>
               </TouchableOpacity>
               <View style={{ width: '100%', borderTopWidth: 1, borderTopColor: '#EEE' }} />
-              <TouchableOpacity style={styles.item} onPress={() => alert("OK")}>
+              <TouchableOpacity style={styles.item} onPress={() => this.props.navigation.push('Claims')}>
                 <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
                   <Icon name="file-zip-o" type="font-awesome" size={20} />
                   <Text style={{ marginLeft: 10, marginRight: 10, fontWeight: 'bold', color: '#444' }} >Claims</Text>
@@ -200,7 +200,7 @@ class Account extends Component {
                 </View>
               </TouchableOpacity>
               <View style={{ width: '100%', borderTopWidth: 1, borderTopColor: '#EEE' }} />
-              <TouchableOpacity style={styles.item} onPress={() => alert("OK")}>
+              <TouchableOpacity style={styles.item} onPress={() => this.props.navigation.push('Profile')}>
                 <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
                   <Icon name="user-circle-o" type="font-awesome" size={20} />
                   <Text style={{ marginLeft: 10, marginRight: 10, fontWeight: 'bold', color: '#444' }} >Profile</Text>
@@ -260,7 +260,7 @@ class Account extends Component {
               </View>
             </TouchableOpacity>
             <View style={{ width: '100%', borderTopWidth: 1, borderTopColor: '#EEE' }} />
-            <TouchableOpacity style={styles.item} onPress={() => Linking.openURL('https://help.noon.com')}>
+            <TouchableOpacity style={styles.item} onPress={() => Linking.openURL('https://help.paksa.com')}>
               <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
                 <Icon name="help-outline" type="material" size={20} />
                 <Text style={{ marginLeft: 10, marginRight: 10, fontWeight: 'bold', color: '#444' }} >Help</Text>
@@ -316,7 +316,7 @@ class Account extends Component {
             <Text style={{ fontSize: 10, color: '#CCC' }}>Version 3.7 (919)</Text>
           </View>
           <View style={{ width: wp('100%'), paddingTop: 20, alignItems: 'center' }}>
-            <Text style={{ fontSize: 10, color: '#7581A7' }}>@ 2020 noon.com, All rights reserved</Text>
+            <Text style={{ fontSize: 10, color: '#7581A7' }}>@ 2020 paksa.com, All rights reserved</Text>
           </View>
         </Content>
         {this.renderCountryModal()}

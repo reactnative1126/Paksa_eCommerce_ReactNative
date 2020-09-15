@@ -32,7 +32,7 @@ class Orders extends Component {
         <Header style={styles.header}>
           <View style={styles.headerBar}>
             <View style={{ flexDirection: 'row', alignItems: 'center', width: 120 }}>
-              <Icon name="arrow-back" type="material" size={25} color={colors.GREY.DARK} onPress={() => this.props.navigation.goBack()} />
+              <Icon name="arrow-back" type="material" size={25} color={colors.GREY.DARK} onPress={() => this.props.navigation.pop()} />
               <Image style={{ width: 70, height: 30, marginLeft: 20, marginRight: 10, borderRadius: 5 }} source={images.logoDark} />
             </View>
           </View>

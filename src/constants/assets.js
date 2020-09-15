@@ -59,6 +59,9 @@ export const images = {
   returns: require("@assets/images/returns.png"),
   request: require("@assets/images/request.png"),
   credit: require("@assets/images/credit.png"),
+  address: require("@assets/images/address.png"),
+  payment: require("@assets/images/payment.png"),
+  claims: require("@assets/images/claims.png"),
 }
 
 export const icons = {

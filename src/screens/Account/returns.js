@@ -33,7 +33,7 @@ class Returns extends Component {
         <Header style={styles.header}>
           <View style={styles.headerBar}>
             <View style={{ flexDirection: 'row', alignItems: 'center', width: 120 }}>
-              <Icon name="arrow-back" type="material" size={25} color={colors.GREY.DARK} onPress={() => this.props.navigation.goBack()} />
+              <Icon name="arrow-back" type="material" size={25} color={colors.GREY.DARK} onPress={() => this.props.navigation.pop()} />
               <Image style={{ width: 70, height: 30, marginLeft: 20, marginRight: 10, borderRadius: 5 }} source={images.logoDark} />
             </View>
           </View>
@@ -56,7 +56,7 @@ class Returns extends Component {
           <Text style={{ color: '#727A91', fontWeight: 'bold', marginTop: 20 }}>We don't see any returns requested</Text>
           <Text style={{ color: '#727A91', marginTop: 10, fontSize: 12 }}>Need to submit a request? Just click on the button below!</Text>
           <TouchableOpacity style={{marginTop: 30, width: wp('40%'), height: 50, backgroundColor: '#3866DF', justifyContent: 'center', alignItems: 'center'}}
-            onPress={()=>this.props.navigation.navigate('Request')}
+            onPress={()=>this.props.navigation.push('Request')}
           >
             <Text style={{color: colors.WHITE, fontWeight: 'bold'}}>SUBMIT A REQUEST</Text>
           </TouchableOpacity>

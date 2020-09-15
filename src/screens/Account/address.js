@@ -15,7 +15,7 @@ import { images, icons, dummy } from "@constants/assets";
 import axios, { setClientToken } from "@utils/axios";
 import i18n from "@utils/i18n";
 
-class Request extends Component {
+class Address extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -33,19 +33,19 @@ class Request extends Component {
         <Header style={styles.header}>
           <View style={styles.headerBar}>
             <View style={{ flexDirection: 'row', alignItems: 'center', width: 120 }}>
-              <Image style={{ width: 70, height: 30, marginLeft: 10, marginRight: 10, borderRadius: 5 }} source={images.logoDark} />
+              <Icon name="arrow-back" type="material" size={25} color={colors.GREY.DARK} onPress={() => this.props.navigation.pop()} />
+              <Image style={{ width: 70, height: 30, marginLeft: 20, marginRight: 10, borderRadius: 5 }} source={images.logoDark} />
             </View>
-              <TouchableOpacity onPress={() => this.props.navigation.pop()} >
-                <Text>CANCEL</Text>
-              </TouchableOpacity>
           </View>
         </Header>
         <Content contentContainerStyle={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-          <Image source={images.request} style={{width: 250, height: 150}}/>
-          <Text style={{ color: '#727A91', fontWeight: 'bold', marginTop: 20 }}>We don't see any returnable items</Text>
-          <Text style={{ color: '#727A91', marginTop: 10, fontSize: 12 }}>Looks like you don't have any returnable items.</Text>
-          <TouchableOpacity style={{marginTop: 30, width: wp('40%'), height: 50, backgroundColor: '#3866DF', justifyContent: 'center', alignItems: 'center'}}>
-            <Text style={{color: colors.WHITE, fontWeight: 'bold'}}>LEARN MORE</Text>
+          <Image source={images.address} style={{width: 250, height: 200}}/>
+          <Text style={{ color: '#727A91', fontWeight: 'bold', marginTop: 20 }}>Where are your saved addresses?</Text>
+          <Text style={{ color: '#727A91', marginTop: 10, fontSize: 12 }}>Add an address so we can get cracking on the delivery!</Text>
+          <TouchableOpacity style={{marginTop: 30, width: wp('40%'), height: 50, backgroundColor: '#3866DF', justifyContent: 'center', alignItems: 'center'}}
+            onPress={()=>alert("Address")}
+          >
+            <Text style={{color: colors.WHITE, fontWeight: 'bold'}}>ADD A NEW ADDRESS</Text>
           </TouchableOpacity>
         </Content>
       </Container>
@@ -88,4 +88,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default connect(undefined, undefined)(Request);
+export default connect(undefined, undefined)(Address);

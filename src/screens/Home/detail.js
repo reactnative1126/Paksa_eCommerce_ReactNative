@@ -22,7 +22,8 @@ class Detail extends Component {
       loading: false,
       loadingMore: false,
       refreshing: false,
-      tab: true
+      tab: true,
+      cart: false
     };
   }
 
@@ -115,7 +116,7 @@ class Detail extends Component {
             <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 10 }}>
               <Icon name="gift" type="antdesign" size={20} />
               <Text style={{ color: '#414141', marginLeft: 10 }}>Sold by </Text>
-              <Text style={{ color: '#3866DF', marginLeft: 10, textDecorationLine: 'underline' }}>noon</Text>
+              <Text style={{ color: '#3866DF', marginLeft: 10, textDecorationLine: 'underline' }}>paksa</Text>
             </View>
           </View>
           <View style={{ padding: 20, paddingTop: 10, borderBottomWidth: 1, borderBottomColor: '#414141', borderBottomWidth: 1, borderBottomColor: '#999' }}>
@@ -196,7 +197,7 @@ class Detail extends Component {
             </View>
           }
           <View style={{ height: 10, backgroundColor: '#EDEDED' }} />
-          <TouchableOpacity style={{flexDirection: 'row', justifyContent: 'center', alignItems: 'center', backgroundColor: '#F7F9FE', width: wp('100%'), height: 50, borderTopWidth: 1, borderTopColor: '#DDD', borderBottomWidth: 1, borderBottomColor: '#DDD'}}>
+          <TouchableOpacity style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', backgroundColor: '#F7F9FE', width: wp('100%'), height: 50, borderTopWidth: 1, borderTopColor: '#DDD', borderBottomWidth: 1, borderBottomColor: '#DDD' }}>
             <Text>Back To Top</Text>
             <Icon name="arrowup" type="antdesign" size={15} />
           </TouchableOpacity>
@@ -204,7 +205,7 @@ class Detail extends Component {
 
           <Products style={{ width: wp('100%'), padding: 15, backgroundColor: '#EDEDED' }}>
             <ProductsHeader title="CUSTOMERS ALSO VIEWED" />
-            <ProductsList data={dummy.recommends} style={{ marginTop: 15 }} onPress={() => this.props.navigation.navigate('Detail')}/>
+            <ProductsList data={dummy.recommends} style={{ marginTop: 15 }} onPress={() => this.props.navigation.navigate('Detail')} />
           </Products>
           <View style={{ height: 100 }} />
         </Content>
@@ -213,10 +214,44 @@ class Detail extends Component {
             <Text style={{ fontSize: 14, color: '#414141' }}>QTY</Text>
             <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#414141' }}>1</Text>
           </View>
-          <TouchableOpacity style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', width: wp('100%') - 60, height: 45, backgroundColor: '#3866DF', paddingLeft: 20, paddingRight: 20 }}>
+          <TouchableOpacity style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', width: wp('100%') - 60, height: 45, backgroundColor: '#3866DF', paddingLeft: 20, paddingRight: 20 }}
+          onPress={()=> this.setState({cart: true})}>
             <Text style={{ fontSize: 14, fontWeight: 'bold', color: colors.WHITE }}>ADD TO CART</Text>
           </TouchableOpacity>
         </View>
+        {this.state.cart && 
+        <TouchableOpacity style={{ position: 'absolute', top: 55, backgroundColor: '#00000080', width: wp('100%'), height: hp('100%') }} onPress={()=> this.setState({cart: false})}/>}
+        {this.state.cart && 
+        <View style={styles.addModal}>
+          <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+            <Icon name="checkcircle" type="antdesign" color={colors.GREEN.DEFAULT} size={25}></Icon>
+            <View style={{ width: wp('100%') - 160 }}>
+              <Text style={{ fontSize: 10, fontWeight: 'bold' }}>Men's Waters Resistant Stainless Steel Chronogra..</Text>
+              <Text style={{ fontSize: 10, fontWeight: 'normal' }}>Added to cart</Text>
+            </View>
+            <View style={{ width: 70, alignItems: 'flex-end' }}>
+              <Text style={{ fontSize: 10, fontWeight: 'normal' }}>Cart Total</Text>
+              <Text style={{ fontSize: 10, fontWeight: 'bold' }}>SAR 4,428.10</Text>
+            </View>
+          </View>
+          <View style={{ paddingTop: 10, paddingBottom: 10, flexDirection: 'row', justifyContent: 'space-between' }}>
+            <TouchableOpacity style={{ width: wp('43%'), height: 30, borderWidth: 1, borderColor: colors.BLUE.PRIMARY, justifyContent: 'center', alignItems: 'center' }} onPress={()=> this.setState({cart: false})}>
+              <Text style={{ fontSize: 11, fontWeight: 'bold', color: colors.BLUE.DEFAULT }}>CONTINUE SHOPPING</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={{ backgroundColor: colors.BLUE.DEFAULT, width: wp('43%'), height: 30, borderWidth: 1, borderColor: colors.BLUE.PRIMARY, justifyContent: 'center', alignItems: 'center' }} onPress={()=>{
+              this.setState({cart: false});
+              this.props.navigation.navigate('Cart')}}>
+              <Text style={{ fontSize: 11, fontWeight: 'bold', color: colors.WHITE }}>CHECKOUT</Text>
+            </TouchableOpacity>
+          </View>
+        </View>}
+        {this.state.cart && 
+        <View style={{ position: 'absolute', top: 150, width: wp('100%'), backgroundColor: colors.GREY.PRIMARY}}>
+          <Products style={{ width: wp('100%'), padding: 15, backgroundColor: '#EDEDED' }}>
+            <ProductsHeader title="FREQUENTY BOUGHT TOGETHER" />
+            <ProductsList data={dummy.recommends} style={{ marginTop: 15 }} onPress={() => this.props.navigation.navigate('Detail')} />
+          </Products>
+        </View>}
       </Container>
     );
   }
@@ -254,6 +289,13 @@ const styles = StyleSheet.create({
     paddingLeft: 5,
     paddingRight: 5
   },
+  addModal: {
+    position: 'absolute', top: 55,
+    width: wp('100%'),
+    height: 100,
+    backgroundColor: colors.WHITE,
+    padding: 20, paddingBottom: 5
+  }
 });
 
 export default connect(undefined, undefined)(Detail);

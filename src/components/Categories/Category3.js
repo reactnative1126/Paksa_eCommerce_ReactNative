@@ -1,5 +1,5 @@
 import React from "react";
-import { Platform, StatusBar, StyleSheet, View, Image, TouchableOpacity, Text } from "react-native";
+import { Platform, StatusBar, StyleSheet, View, Image, TouchableOpacity, Text, ScrollView } from "react-native";
 
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
 import { Icon } from "react-native-elements";
@@ -13,7 +13,7 @@ import i18n from "@utils/i18n";
 
 const Category3 = (props) => {
   return (
-    <View style={[{ width: '100%', height: hp('100%') }, { ...props.style }]}>
+    <ScrollView contentContainerStyle={[{ width: wp('100%') - 100 }, { ...props.style }]}>
       <ImageOne image={images.banner22} style={{ width: '100%', height: 120, padding: 15 }} onPress={props.onPress} />
       <Collapse title={"Headphones & Speakers"} data={dummy.mobiles1} onPress={props.onPress} />
       <Collapse title={"Computers & Networking"} data={dummy.mobiles1} onPress={props.onPress} />
@@ -23,7 +23,7 @@ const Category3 = (props) => {
       <Collapse title={"Home Audio"} data={dummy.mobiles1} onPress={props.onPress} />
       <Collapse title={"eXtra"} data={dummy.mobiles1} onPress={props.onPress} />
       <ImageOne image={images.banner32} style={{ width: '100%', height: 120, padding: 15 }} onPress={props.onPress} />
-    </View>
+    </ScrollView>
   );
 };
 

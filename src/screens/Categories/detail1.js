@@ -115,7 +115,7 @@ class Detail1 extends Component {
             <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 10 }}>
               <Icon name="gift" type="antdesign" size={20} />
               <Text style={{ color: '#414141', marginLeft: 10 }}>Sold by </Text>
-              <Text style={{ color: '#3866DF', marginLeft: 10, textDecorationLine: 'underline' }}>noon</Text>
+              <Text style={{ color: '#3866DF', marginLeft: 10, textDecorationLine: 'underline' }}>paksa</Text>
             </View>
           </View>
           <View style={{ padding: 20, paddingTop: 10, borderBottomWidth: 1, borderBottomColor: '#414141', borderBottomWidth: 1, borderBottomColor: '#999' }}>

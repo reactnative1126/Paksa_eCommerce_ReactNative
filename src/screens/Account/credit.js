@@ -33,7 +33,7 @@ class Credit extends Component {
         <Header style={styles.header}>
           <View style={styles.headerBar}>
             <View style={{ flexDirection: 'row', alignItems: 'center', width: 120 }}>
-              <Icon name="arrow-back" type="material" size={25} color={colors.GREY.DARK} onPress={() => this.props.navigation.goBack()} />
+              <Icon name="arrow-back" type="material" size={25} color={colors.GREY.DARK} onPress={() => this.props.navigation.pop()} />
               <Image style={{ width: 70, height: 30, marginLeft: 20, marginRight: 10, borderRadius: 5 }} source={images.logoDark} />
             </View>
           </View>
@@ -43,7 +43,7 @@ class Credit extends Component {
           <View style={styles.giftCard}>
             <TouchableOpacity style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}
               onPress={()=>this.setState({card: !this.state.card})}
-            ><Icon name="plus" type="antdesign" size={15} /><Text style={{ marginLeft: 5, fontSize: 12 }}>Redeem your noon gift card</Text></TouchableOpacity>
+            ><Icon name="plus" type="antdesign" size={15} /><Text style={{ marginLeft: 5, fontSize: 12 }}>Redeem your paksa gift card</Text></TouchableOpacity>
             {this.state.card &&
               <View style={{flexDirection: 'row', justifyContent: 'space-between', marginTop: 5}}>
                 <Text>Card</Text>
@@ -52,7 +52,7 @@ class Credit extends Component {
         </View>
         <Content contentContainerStyle={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
           <Image source={images.credit} style={{ width: 250, height: 180 }} />
-          <Text style={{ color: '#727A91', fontWeight: 'bold', marginTop: 20 }}>You don't have any noon credit yet</Text>
+          <Text style={{ color: '#727A91', fontWeight: 'bold', marginTop: 20 }}>You don't have any paksa credit yet</Text>
         </Content>
       </Container>
     );

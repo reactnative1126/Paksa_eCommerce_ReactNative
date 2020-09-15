@@ -6,6 +6,7 @@ import {
   View,
   Text,
   TouchableOpacity,
+  ScrollView
 } from "react-native";
 
 import {
@@ -23,17 +24,17 @@ import i18n from "@utils/i18n";
 
 const Category1 = (props) => {
   return (
-    <View style={[{ width: '100%', height: hp('100%') }, { ...props.style }]}>
+    <ScrollView contentContainerStyle={[{ width: wp('100%') - 100 }, { ...props.style }]}>
       <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', width: '100%', height: 50, paddingLeft: 10, paddingRight: 10 }}>
         <Text style={{ fontSize: 12, fontWeight: 'bold' }}>Recently Viewed Categories</Text>
         <TouchableOpacity>
           <Text style={{ fontSize: 14, color: '#6A8DE7' }}>Clear</Text>
         </TouchableOpacity>
       </View>
-      <ImageOne image={images.banner21} style={{ width: '100%', height: 120, padding: 15 }} onPress={props.onPress}/>
-      <ImageOne image={images.banner22} style={{ width: '100%', height: 120, padding: 15 }} onPress={props.onPress}/>
-      <CategoryItems data={dummy.data5} onPress={props.onPress}/>
-    </View>
+      <ImageOne image={images.banner21} style={{ width: '100%', height: 120, padding: 15 }} onPress={props.onPress} />
+      <ImageOne image={images.banner22} style={{ width: '100%', height: 120, padding: 15 }} onPress={props.onPress} />
+      <CategoryItems data={dummy.data5} onPress={props.onPress} />
+    </ScrollView>
   );
 };
 

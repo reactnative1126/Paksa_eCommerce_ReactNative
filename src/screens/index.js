@@ -19,6 +19,11 @@ import Orders from '@screens/Account/orders';
 import Returns from '@screens/Account/returns';
 import Request from '@screens/Account/request';
 import Credit from '@screens/Account/credit';
+import Address from '@screens/Account/address';
+import Payment from '@screens/Account/payment';
+import Claims from '@screens/Account/claims';
+import ClaimsAdd from '@screens/Account/claimsadd';
+import Profile from '@screens/Account/profile';
 import Cart from '@screens/Cart';
 import Shops3 from '@screens/Cart/shops3';
 import Detail3 from '@screens/Cart/detail3';
@@ -29,6 +34,6 @@ export {
     Home, Search, Shops, Detail, Filters,
     Categories, Shops1, Detail1,
     Deals, Shops2, Detail2,
-    Account, Orders, Returns, Request, Credit,
+    Account, Orders, Returns, Request, Credit, Address, Payment, Claims, ClaimsAdd, Profile,
     Cart, Shops3, Detail3,
 }

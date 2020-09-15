@@ -115,7 +115,7 @@ class Home extends Component {
           <Products style={{ width: wp('100%'), paddingLeft: 15, paddingRight: 15 }}>
             <ProductsHeader
               onPress={() => this.props.navigation.navigate('Shops')}
-              title={"Renewed By noon - Like New, For Less"}
+              title={"Renewed By paksa - Like New, For Less"}
               titleStyle={{ width: '60%' }}
               viewStyle={{ borderColor: '#3967DF' }}
               textStyle={{ fontSize: 12, fontWeight: 'bold', color: '#3967DF' }} />
